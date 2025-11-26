@@ -44,9 +44,12 @@ async function runServer() {
           await configManager.loadConfig();
           deferLog('info', 'Configuration loaded successfully');
           
-          // Initialize feature flags (non-blocking)
-          deferLog('info', 'Initializing feature flags...');
-          await featureFlagManager.initialize();
+          const ENABLE_FEATURE_FLAGS = process.env.ENABLE_FEATURE_FLAGS === 'true' || process.argv.includes('--enable-feature-flags');
+          if (ENABLE_FEATURE_FLAGS) {
+              // Initialize feature flags (non-blocking)
+              deferLog('info', 'Initializing feature flags...');
+              await featureFlagManager.initialize();
+          }
       } catch (configError) {
           deferLog('error', `Failed to load configuration: ${configError instanceof Error ? configError.message : String(configError)}`);
           if (configError instanceof Error && configError.stack) {

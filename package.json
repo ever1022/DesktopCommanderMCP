@@ -1,12 +1,12 @@
 {
-  "name": "@wonderwhy-er/desktop-commander",
-  "version": "0.2.23",
-  "description": "MCP server for terminal operations and file editing",
+  "name": "@ever_cheng/desktop-commander",
+  "version": "0.2.23-patched",
+  "description": "MCP server for terminal operations and file editing - Fork of @wonderwhy-er/desktop-commander",
   "mcpName": "io.github.wonderwhy-er/desktop-commander",
   "license": "MIT",
   "author": "Eduards Ruzga",
-  "homepage": "https://github.com/wonderwhy-er/DesktopCommanderMCP",
-  "bugs": "https://github.com/wonderwhy-er/DesktopCommanderMCP/issues",
+  "homepage": "https://github.com/ever1022/DesktopCommanderMCP",
+  "bugs": "https://github.com/ever1022/DesktopCommanderMCP/issues",
   "type": "module",
   "engines": {
     "node": ">=18.0.0"
